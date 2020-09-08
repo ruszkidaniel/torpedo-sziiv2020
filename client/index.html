@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+		<title>Torpedo</title>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="UTF-8">
+		<script src="js/jquery.js"></script>
+        <script src="js/socket.io.js"></script>
+    </head>
+    <body>
+		<div id="page">
+			<h1 id="title">Torpedo</h1>
+			<div id="statusbar" class="after-login">
+				<div id="gameinfo">
+					<p id="message"></p>
+					<button id="backtolobby">Kilépés a játékból</button>
+				</div>
+			</div>
+			<div id="login">
+				<form class="loginform">
+					<p class="response">Várakozás a szerverre..</p>
+					<input type="text" class="username" placeholder="Felhasználónév">
+				</form>
+			</div>
+			<div id="lobby" class="after-login">
+				<ul id="users">
+				</ul>
+			</div>
+			<div id="invites" class="after-login">
+				<h3>Meghívók <button id="changebusy">Kikapcsolás</button></h3>
+				<div class="received sample">
+					<h3>JÁTÉKMEGHÍVÓ</h3>
+					<p><b class="invitedBy"></b> meghívott játszani!</p>
+					<button class="acceptInvite">Elfogadás</button> <button class="declineInvite">Törlés</button>
+				</div>
+				<div class="sent sample">
+					<h3>JÁTÉKMEGHÍVÓ</h3>
+					<p>Elküldve neki: <b class="target"></b></p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="maps">
+				<div id="own"></div>
+				<div id="enemy"></div>
+			</div>
+		</div>
+        <script src="js/client.js"></script>
+	</body>
+</html>

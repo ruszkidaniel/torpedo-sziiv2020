@@ -1,0 +1,237 @@
+@font-face {
+    font-family: go3v2;
+    src: url("font/go3v2.ttf") format("truetype");
+}
+@font-face {
+    font-family: made-tommy;
+    src: url("font/made-tommy.otf") format("opentype");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: made-tommy;
+}
+input, button{
+	padding: 5px;
+}
+body {
+	background: url('img/bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#invites .sample,
+.invitebox  {
+	display: none;
+}
+.invitebox,
+#connectioninfo,
+#page {
+	width: 85%;
+	margin: 20px auto;
+	padding: 10px;
+	overflow: auto;
+}
+#page {
+	height: 90vh;
+}
+#page #title {
+	font-family: go3v2;
+	margin-bottom: 1em;
+	color: #000;
+	font-size: 72pt;
+}
+#login .response {
+	margin-bottom: 1em;
+	color: #a00;
+}
+#login {
+	text-align: center;
+	position: absolute;
+	margin: auto;
+	color: #000;
+	width: 50%;
+	margin-top: 3em;
+
+	position: absolute;
+	top: 20%; right: 50%;
+	transform: translate(50%,-50%);
+}
+#login input {
+	font-size: 14pt;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	border-bottom: 4px solid #000;
+	width: 40%;
+	color: #000;
+	text-align: center;
+	font-weight: bold;
+}
+#login input::placeholder {
+	color: #111;
+}
+#login input:focus::placeholder {
+	color: transparent;
+}
+button {
+	padding: 10px;
+	border: 0;
+	background: #333;
+	color: #bbb;
+	cursor: pointer;
+}
+.invbtn {
+	float: right;
+}
+button:hover {
+	background: #222;
+}
+#users, 
+#invites {
+	height: 50vh;
+    max-height: 50vh;
+}
+#users {
+    list-style: none;
+	width: 50%;
+	margin-left: 50%;
+	margin: 0 auto;
+    overflow: auto;
+}
+#users li {	
+	padding: 5px;
+	margin: 5px 0;
+	font-size: 14pt;
+	height: 40px;
+}
+.after-login {
+	display: none;
+}
+#gameinfo {
+	display: none;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 10px;
+}
+#lobby {
+	width: calc(70% - 10px);
+	float: left;
+	border-right: 5px dashed black;
+	background: rgba(255,255,255,0.2);
+	border-radius: 10px;
+}
+
+#backtolobby {
+	background: rgba(0,0,255,0.4);
+}
+#changebusy {
+	float: right;
+}
+#invites {
+	width: 30%;
+	float: left;
+}
+#invites h3 {
+	color: #fff;
+	text-align: center;
+	text-shadow: #000 2px 2px 0;
+}
+.invitebox {
+	background: #444;
+	float: left;
+	margin: 10px;
+	text-align: center;
+	color: #f80;
+	border-radius: 10px;
+}
+.invitebox h3 {
+	margin-bottom: 1em;
+}
+.invitebox.incoming {
+	background: rgba(0,255,0,0.5);
+	color: #222;
+}
+#maps {
+	display: none;
+	text-align: center;
+	width: 100%;
+}
+.map {
+	width: calc(50% - 32px); /* padding + margin + border */
+	padding: 10px;
+	margin: 5px;
+	float: left;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	background: rgba(0,0,0,0.2);
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.box {
+	border: 1px solid #ddd;
+	background: #eee;
+	width: 10%;
+}
+.box:hover {
+	background: #ddd;
+}
+.active {
+	background: #555 !important;
+	color: #fe0;
+}
+.ship {
+	background: rgba(100,100,100,0.5) !important;
+}
+.shippreview.hover {
+	background: rgba(0,50,255,0.8) !important;
+}
+.shippreview {
+	background: rgba(0,50,255,0.5) !important;
+}
+.shippreview:hover {
+	background: rgba(0,50,255,0.8) !important;
+}
+#own .row div {
+	background: rgba(0,155,255,0.6);
+}
+#enemy .row div {
+	background: rgba(255,50,0,0.6);
+}
+#own .row div.transparent,
+#enemy .row div.transparent {
+	background: transparent;
+	border: 0;
+}
+#enemy:not(.disabled) .row div:not(.transparent):hover {
+	background: rgba(255, 50, 0, 0.8);
+}
+#own:not(.disabled) .row div:not(.transparent):hover {
+	background: rgba(0,155,255,0.8);
+}
+.box.sank {
+	background: rgba(255,30, 0, 0.6) !important;
+}
+.map.disabled {
+	cursor: not-allowed;
+}
+.map {
+	cursor: crosshair;
+}
+.clear {
+	clear: both;
+}
+.label {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 25px;
+	background: transparent !important;
+	border: 0;
+	color: #fff;
+}
+h1 {
+	text-align: center;
+}
